@@ -4,3 +4,44 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.showcase::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url(showcase.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: all 0.5s ease;
+}
+.showcase:hover::after {
+  filter: blur(0px);
+  -webkit-filter: blur(0px); 
+}
+.showcase:hover .content {
+  filter: blur(2px);
+  -webkit-filter: blur(2px); 
+}
+
+.content {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+  margin-top: 105px;
+  margin-left: -165px;
+  text-align: center;
+  transition: all 1s ease;
+}
+.content .logo {
+  height: 180px;
+}
+
+.content .title {
+  font-size: 3.5rem;
+  margin-top: 1rem;
+}
